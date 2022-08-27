@@ -8,10 +8,10 @@ objeto.
 d) Método area(): para calcular el área de la circunferencia (𝐀𝐫𝐞𝐚 = 𝛑 ∗ 𝐫𝐚𝐝𝐢𝐨𝟐).
 e) Método perimetro(): para calcular el perímetro (𝐏𝐞𝐫𝐢𝐦𝐞𝐭𝐫𝐨 = 𝟐 ∗ 𝛑 ∗ 𝐫𝐚𝐝𝐢𝐨).
  */
-package ejerciciopoon02;
+package Circunferencia;
 
 import java.util.Scanner;
-import java.lang.Math;
+
 
 
 public class Circunferencia {
@@ -33,17 +33,5 @@ public class Circunferencia {
     public double getRadio(){
         return radio;
     }
-    public double crearCircunferencia(){
-        System.out.println("Ingrese el radio de la circunferencia");
-        radio = leer.nextDouble();
-        return 0;
-    }
-    public double area(){
-        double area = (Math.PI) * (radio*radio);
-        return area;
-    }
-    public double perimetro(){
-        double perimetro = 2 * (Math.PI) * radio;
-        return perimetro;
-    }
+    
 }

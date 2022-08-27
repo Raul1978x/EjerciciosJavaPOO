@@ -15,7 +15,7 @@ h) Método dividir(): primero valida que no se haga una división por cero, si f
 una división por cero, el método devuelve 0 y se le informa al usuario el error se le
 informa al usuario. Si no, se hace la división y se devuelve el resultado al main.
  */
-package ejerciciopoon03;
+package Operacion;
 
 import java.util.Scanner;
 
@@ -24,7 +24,6 @@ public class Operacion {
     private int numero1;
     private int numero2;
 
-    Scanner leer = new Scanner(System.in);
 
     public Operacion() {
 
@@ -51,39 +50,4 @@ public class Operacion {
         return numero2;
     }
 
-    public void crearOperacion() {
-        System.out.println("Ingrese el numero 1");
-        numero1 = leer.nextInt();
-        System.out.println("Ingrese el numero 2");
-        numero2 = leer.nextInt();
-    }
-
-    public int sumar() {
-        int suma = numero1 + numero2;
-        return suma;
-    }
-
-    public int restar() {
-        int resta = numero1 - numero2;
-        return resta;
-    }
-
-    public int multiplicar() {
-        int producto;
-        if (numero1 == 0 || numero2 == 0) {
-            producto = 0;
-        } else {
-            producto = numero1 * numero2;
-        }
-        return producto;
-    }
-    public double dividir() {
-        double division;
-        if (numero1 == 0 || numero2 == 0) {
-            division = 0;
-        } else {
-             division = (double) numero1 / numero2;
-        }
-        return division;
-    }
 }

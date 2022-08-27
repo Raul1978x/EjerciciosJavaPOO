@@ -1,4 +1,3 @@
-
 package libro.entidades;
 
 import java.util.Scanner;
@@ -11,40 +10,58 @@ luego informar mediante otro método el número de ISBN, el título, el autor de
 numero de páginas.
  */
 public class Libro {
-    public int isbn;
-    public String titulo;
-    public String autor;
-    public int numPag;
-    Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    
-    public Libro(){
-        
+
+    private int isbn;
+    private String titulo;
+    private String autor;
+    private int numPag;
+
+    public Libro() {
+
     }
-    public Libro(int isbn, String titulo, String autor, int numPag){
+
+    public Libro(int isbn, String titulo, String autor, int numPag) {
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;
         this.numPag = numPag;
     }
-    
-    public Libro cargaLibro(){
-        Libro lb1 = new Libro();
-       
-        System.out.println("Ingrese el número ISBN del libro: ");
-        isbn = leer.nextInt();
-        System.out.println("Ingrese el título del libro: ");
-        titulo = leer.next();
-        System.out.println("Ingrese el Autor del libro: ");
-        autor = leer.next();
-        System.out.println("Ingrese el número de paginas del libro: ");
-        numPag = leer.nextInt();
-        return lb1;
+
+    public int getIsbn() {
+        return isbn;
     }
-    public void infoLibro(){
-        System.out.println("El número de ISBN del libro es: " + isbn);
-        System.out.println("El Título del libro es: " + titulo);
-        System.out.println("El Autor del libro es: " + autor);
-        System.out.println("El número de páginas del libro es: " + numPag);
-        
+
+    public void setIsbn(int isbn) {
+        this.isbn = isbn;
     }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getNumPag() {
+        return numPag;
+    }
+
+    public void setNumPag(int numPag) {
+        this.numPag = numPag;
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" + "\nisbn=" + isbn + "\ntitulo=" + titulo + "\nautor=" + autor + "\nnumPag=" + numPag + '}';
+    }
+
 }

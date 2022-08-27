@@ -8,7 +8,7 @@ altura. Se deberán además definir los métodos getters, setters y constructore
 correspondientes.
 Superficie = base * altura / Perímetro = (base + altura) * 2.
  */
-package ejerciciopoon04;
+package Rectangul;
 
 import java.util.Scanner;
 
@@ -42,35 +42,5 @@ public class Rectangulo {
         this.altura = altura;
     }
 
-    public void crearRectangulo() {
-
-        System.out.println("Ingrese la base del rectangulo");
-        base = leer.nextInt();
-        System.out.println("Ingrese la altura del rectangulo");
-        altura = leer.nextInt();
-    }
-
-    public int superficie() {
-        int superficie = base * altura;
-        return superficie;
-    }
-
-    public int perimetro() {
-        int perimetro = (base + altura) * 2;
-        return perimetro;
-    }
-
-    public void dibujo() {
-        for (int i = 0; altura > i; i++) {
-                for (int j = 0; base > j; j++) {
-                    if (i == 0 || i == altura-1 || j == 0 || j == base-1) {
-                        System.out.print("* ");
-                    } else {
-                        System.out.print("  ");
-                    }
-                }
-                System.out.println("");
-        }
-
-    }
+   
 }

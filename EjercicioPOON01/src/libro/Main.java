@@ -8,17 +8,17 @@ numero de páginas.
 package libro;
 
 import libro.entidades.Libro;
+import servicio.ServicioLibro;
 
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        Libro l1 = new Libro();
-        l1.cargaLibro();
-        l1.infoLibro();
-                
+
+        ServicioLibro sl = new ServicioLibro();
+
+        Libro l1 = sl.cargaLibro();
+        Libro l2 = sl.cargaLibro();
+        sl.infoLibro(l1);
+        sl.infoLibro(l2);
     }
 }
-
