@@ -3,15 +3,6 @@ package ejerciciopoon08;
 import entidad.Cadena;
 import java.util.Scanner;
 
-/*
-8. Realizar una clase llamada Cadena que tenga como atributos una frase (de tipo de String)
-y su longitud. En el main se creará el objeto y se le pedirá al usuario que ingrese una frase
-que puede ser una palabra o varias palabras separadas por un espacio en blanco y a
-través de los métodos set, se guardará la frase y la longitud de manera automática según
-la longitud de la frase ingresada. Deberá además implementar los siguientes métodos:
-a) Método mostrarVocales(), deberá contabilizar la cantidad de vocales que tiene la frase
-ingresada.
- */
 public class EjercicioPOON08 {
 
     public static void main(String[] args) {

@@ -39,7 +39,7 @@ public class CuentaService {
         saldo = c.getSaldo();
         System.out.println("Ingrese cuanto dinero desea depositar");
         ingreso = leer.nextDouble();
-        saldo += ingreso;
+        c.setSaldo(saldo+ingreso);
         return saldo;
     }
 
@@ -51,7 +51,7 @@ public class CuentaService {
         retiro = leer.nextDouble();
         if (retiro > c.getSaldo()) {
             System.out.println("Su saldo es de: $" + c.getSaldo() + " ¿desea retirar el total?(S/N)");
-            resp = leer.nextLine();
+            resp = leer.next();
             if (resp.equalsIgnoreCase("s")) {
                 System.out.println("Extracción: $" + c.getSaldo() + "\nSaldo Actual: $0.0");
                 saldo = 0;
@@ -59,7 +59,7 @@ public class CuentaService {
                 System.out.println("Ingrese cuanto dinero desea retirar");
                 retiro = leer.nextDouble();
                 saldo = c.getSaldo() - retiro;
-                System.out.println("Extracción: $" + retiro + "\nSaldo Actual: $" + saldo);
+                System.out.println("Extracción: $" + retiro + "\nSaldo Actual: $" + c.getSaldo());
 
             }
         } else {
@@ -73,8 +73,8 @@ public class CuentaService {
         double saldo = c.getSaldo();
         double extRapid = saldo * 0.2;
         System.out.println("Usted seleccionó una extraccion Rápida, se le entregará el 20% de su saldo actual ");
-        saldo = saldo - extRapid;
-        System.out.println("Extracción: $" + extRapid + " \nSaldo Actual: $" + saldo);
+        c.setSaldo(saldo-extRapid);
+        System.out.println("Extracción: $" + extRapid + " \nSaldo Actual: $" + c.getSaldo());
     }
 
     public void consultaSaldo(Cuenta c) {

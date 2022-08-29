@@ -24,8 +24,7 @@ public class Cafetera {
 
     private double capMax;
     private double cantActual;
-    Scanner leer = new Scanner(System.in);
-    Scanner leerS = new Scanner(System.in);
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
 
     public Cafetera() {
     }
@@ -70,7 +69,7 @@ public class Cafetera {
                 System.out.println("Taza llena");
                 System.out.println("Cantidad café restante " + (int) cantActual + " ml");
                 System.out.println("¿Desea Servir otra taza?(S/N)");
-                op = leerS.nextLine().toUpperCase();
+                op = leer.next().toUpperCase();
                 resp = op.equals("S");
 
             } else {
@@ -94,7 +93,14 @@ public class Cafetera {
         System.out.println("Cantidad de café Actual " + (int) cantActual + " ml");
         System.out.println("Ingrese cantidad de café a agregar(MAX " + (int) (1500 - cantActual) + " ml)");
         cantAgregada = leer.nextInt();
-        cantActual += cantAgregada;
+        if(cantAgregada+cantActual>1500){
+            System.out.println("Ingrese hasta "+(int)(1500-cantActual));
+            cantAgregada = leer.nextInt();
+            cantActual += cantAgregada;
+        }else {
+            cantActual += cantAgregada;
+        }
+        
         System.out.println("Cafetera tiene ahora " + (int) cantActual + " ml de café");
     }
 }
