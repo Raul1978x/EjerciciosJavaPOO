@@ -56,7 +56,7 @@ public class Cadena {
         this.longitud = this.frase.length();
     }
 
-    public int mostrarVocales(Cadena c) {
+    public void mostrarVocales(Cadena c) {
         int cont = 0;
         for (int i = 0; i < frase.length(); i++) {
             if ("a".equalsIgnoreCase(frase.substring(i, i + 1)) || "e".equalsIgnoreCase(frase.substring(i, i + 1)) || "i".equalsIgnoreCase(frase.substring(i, i + 1)) || "o".equalsIgnoreCase(frase.substring(i, i + 1)) || "u".equalsIgnoreCase(frase.substring(i, i + 1))) {
@@ -64,7 +64,6 @@ public class Cadena {
             }
         }
         System.out.println("la cantidad de vocales es: " + cont);
-        return cont;
     }
 
     public void invertirFrase(Cadena c) {
