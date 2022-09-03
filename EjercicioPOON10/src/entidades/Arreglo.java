@@ -1,46 +1,37 @@
 package entidades;
 
+import java.util.Arrays;
+
 public class Arreglo {
 
-    private int[] arreglo1 = new int[50];
-    private int[] arreglo2 = new int[20];
+    private double[] arreglo1 = new double[50];
+    private double[] arreglo2 = new double[20];
+
+    public double[] getArreglo1() {
+        return arreglo1;
+    }
+
+    public void setArreglo1(double[] arreglo1) {
+        this.arreglo1 = arreglo1;
+    }
+
+    public double[] getArreglo2() {
+        return arreglo2;
+    }
+
+    public void setArreglo2(double[] arreglo2) {
+        if (arreglo2.length <= 20) {
+            for (int i = 0; i < arreglo2.length; i++) {
+                this.arreglo2[i] = arreglo2[i];
+            }
+        }
+    }
 
     public Arreglo() {
     }
 
-    public int[] getArreglo1() {
-        return arreglo1;
-    }
-
-    public void setArreglo1(int[] arreglo1) {
-        this.arreglo1 = arreglo1;
-    }
-
-    public int[] getArreglo2() {
-        return arreglo2;
-    }
-
-    public void setArreglo2(int[] arreglo2) {
-        this.arreglo2 = arreglo2;
-    }
-
     @Override
     public String toString() {
-        return "Arreglo{" + "arreglo1=" + arreglo1 + ", arreglo2=" + arreglo2 + '}';
+        return "Arreglo{" + "arreglo1=" + Arrays.toString(arreglo1) + ", arreglo2=" + Arrays.toString(arreglo2) + '}';
     }
-
-    public void llenarArreglo() {
-        System.out.println("arreglo 1");
-        for (int i = 0; i < 50; i++) {
-            arreglo1[i] = (int) (Math.random() * 200 - 100);
-            System.out.print(" |" + arreglo1[i] + "| ");
-        }
-        System.out.println("");
-        System.out.println("arreglo 2");
-        for (int i = 0; i < 20; i++) {
-            arreglo2[i] = (int) (Math.random() * 200 - 100);
-            System.out.print(" |" + arreglo2[i] + "| ");
-        }
-    }
-
 }

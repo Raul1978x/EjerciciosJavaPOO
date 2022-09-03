@@ -10,16 +10,17 @@ Ejemplo fecha actual: Date fechaActual = new Date();
  */
 package ejerciciopoon11;
 
-import Entidades.Fecha;
+import entidad.Fecha;
+import service.FechaService;
 
 public class EjercicioPOON11 {
 
     public static void main(String[] args) {
-        Fecha f = new Fecha();
+        FechaService fs = new FechaService();
+        Fecha f;
+        fs.llenaFecha();
         System.out.println("--------------------------------");
-        System.out.println(f.getFechaActual());
-        System.out.println(f.getFecha());
-        System.out.println(f.setDia(30));
+//        System.out.println(fs);
         
 
     }

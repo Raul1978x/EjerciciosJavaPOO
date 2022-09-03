@@ -1,11 +1,12 @@
 package ejerciciopoon10;
 
 import entidades.Arreglo;
+import service.ServiceArreglo;
 
 public class EjercicioPOON10 {
 
     public static void main(String[] args) {
-        Arreglo a = new Arreglo();
-        a.llenarArreglo();
+        ServiceArreglo sa = new ServiceArreglo();
+        Arreglo a = sa.llenarArreglo();
     }
 }
