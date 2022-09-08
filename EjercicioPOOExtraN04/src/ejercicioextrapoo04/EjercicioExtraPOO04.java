@@ -38,31 +38,19 @@
  * 21   K
  * 22   E
  */
-package serviceNif;
+package ejercicioextrapoo04;
 
-import entidades.Nif;
-import java.util.Scanner;
+import ServiceNif.ServiceNif;
+import entidad.Nif;
 
-public class ServiceNif {
+public class EjercicioExtraPOO04 {
 
-    Nif nif = new Nif();
-    private Scanner leer = new Scanner(System.in).useDelimiter("\n");
+    public static void main(String[] args) {
+ServiceNif SNif = new ServiceNif();
+Nif nif = SNif.crearNif();
+SNif.calcula(nif);
+SNif.mostrar(nif);
 
-    /**
-     * • Método crearNif(): le pide al usuario el DNI y con ese DNI calcula la
-     * letra que le corresponderá. Una vez calculado, le asigna la letra que le
-     * corresponde según el resultado del calculo.
-     */
-    public Nif crearNif(){
-        System.out.println("Ingrese su DNI:");
-        nif.setDni(leer.nextLong());
-//        nif.setLetra(T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, E);
-//        letra = {T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, E};
-//        
-                
-        
-//                letranif[] = {T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, E};
-        
-        return nif;
     }
+    
 }

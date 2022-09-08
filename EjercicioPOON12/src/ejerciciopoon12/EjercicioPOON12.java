@@ -26,6 +26,8 @@ public class EjercicioPOON12 {
         ServicePersona sp = new ServicePersona();
         Persona p = sp.crearpersona();
         sp.calcularEdad(p);
+        sp.menorQue(18);
+        sp.mostrarPersona();
     }
 
 }

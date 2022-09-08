@@ -38,42 +38,43 @@
  * 21   K
  * 22   E
  */
-package entidades;
+package ServiceNif;
 
-public class Nif {
-    
-    private long dni;
-    private String[] letra;
+import entidad.Nif;
+import java.util.Arrays;
+import java.util.Scanner;
 
-    public Nif() {
+public class ServiceNif {
+
+    /**
+     * • Método crearNif(): le pide al usuario el DNI y con ese DNI calcula la
+     * letra que le corresponderá. Una vez calculado, le asigna la letra que le
+     * corresponde según el resultado del calculo.
+     */
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
+
+    public Nif crearNif() {
+        Nif nif_1 = new Nif();
+        System.out.println("Ingrese el numero DNI: ");
+        nif_1.setDni(leer.nextLong());
+        return nif_1;
     }
 
-    public Nif(long dni, String[] letra) {
-        this.dni = dni;
-        this.letra = letra;
+    public void calcula(Nif coso) {
+        // dícese de cualquier cosita
+        int resultado = (int) coso.getDni() % 23;
+        String[] letra = new String[23];
+        String cadena = "TRWAGMYFPDXBNJZSQVHLCKE";
+        for (int i = 0; i < cadena.length(); i++) {
+            letra[i] = cadena.substring(i, i + 1);
+        }
+        coso.setNif(letra[resultado]);
     }
+//    * • Método mostrar(): que nos permita mostrar el NIF (ocho dígitos, un guion y la letra en
+// * mayúscula; por ejemplo: 00395469-F).
 
-   
-
-    public long getDni() {
-        return dni;
-    }
-
-    public void setDni(long dni) {
-        this.dni = dni;
-    }
-
-    public String[] getLetra() {
-        return letra;
-    }
-
-    public void setLetra(String[] letra) {
-        this.letra = letra;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Nif{" + "dni=" + dni + ", letra=" + letra + '}';
+    public void mostrar(Nif cosita) {
+        String n = cosita.getDni() + "";
+        System.out.println(n + "-" + cosita.getNif());
     }
 }

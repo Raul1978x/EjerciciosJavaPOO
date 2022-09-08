@@ -40,17 +40,17 @@
  */
 package ejerciciopooextran04;
 
-/**
- *
- * @author Raul
- */
+import entidades.Nif;
+import java.util.Arrays;
+import serviceNif.ServiceNif;
+
 public class EjercicioPOOExtraN04 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+    ServiceNif SN = new ServiceNif();
+    Nif nif1 = SN.crearNif();
+    SN.mostrarNif(nif1);
+    
     }
 
 }

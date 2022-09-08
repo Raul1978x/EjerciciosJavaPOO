@@ -7,6 +7,7 @@ public class Arreglo {
     private double[] arreglo1 = new double[50];
     private double[] arreglo2 = new double[20];
 
+    
     public double[] getArreglo1() {
         return arreglo1;
     }

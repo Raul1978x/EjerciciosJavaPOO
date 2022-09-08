@@ -18,9 +18,12 @@ import java.util.Arrays;
  */
 public class ServiceArreglo {
 
-    Arreglo a1 = new Arreglo();
+    
 
     public Arreglo llenarArreglo() {
+        
+        Arreglo a1 = new Arreglo();
+        
         System.out.println("arreglo 1");
         for (int i = 0; i < 50; i++) {
             a1.getArreglo1()[i] = (int) (Math.random() * 100 + 1);

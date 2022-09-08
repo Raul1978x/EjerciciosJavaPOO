@@ -26,6 +26,7 @@ public class Raiz {
     private double a;
     private double b;
     private double c;
+    
 
     public Raiz(double a, double b, double c) {
         this.a = a;

@@ -27,12 +27,13 @@ import servicioRaiz.ServiceRaiz;
 public class EjercicioPOOExtraN03 {
 
     public static void main(String[] args) {
-        ServiceRaiz sr = new ServiceRaiz();
-        Raiz r =null;
-        sr.getDiscriminante();
-        System.out.println("¿Tiene raices? "+sr.tieneRaices());
-        System.out.println("¿Tiene una unica raiz? "+sr.tieneRaiz());
-dsad
+        ServiceRaiz servRaiz = new ServiceRaiz();
+        Raiz coefRaiz = servRaiz.coeficientes();
+        servRaiz.Discriminante(coefRaiz);
+        servRaiz.tieneRaices(coefRaiz);
+        servRaiz.tieneRaiz(coefRaiz);
+        servRaiz.obtenerRaices(coefRaiz);
+        servRaiz.calcular(coefRaiz);
     }
 
 }

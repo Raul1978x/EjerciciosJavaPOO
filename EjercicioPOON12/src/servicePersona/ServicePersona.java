@@ -22,7 +22,6 @@ import java.util.Date;
 import java.util.Scanner;
 import java.lang.Integer;
 
-
 public class ServicePersona {
 
     private Scanner leer = new Scanner(System.in).useDelimiter("\n");
@@ -48,17 +47,29 @@ public class ServicePersona {
         p.setEdad(hoy.getYear() - p.getFechaNacimento().getYear());
         System.out.println("Edad: " + p.getEdad() + " años");
     }
+
     /**
      * • Agregar a la clase el método menorQue(int edad) que recibe como
      * parámetro otra edad y retorna true en caso de que el receptor tenga menor
      * edad que la persona que se recibe como parámetro, o false en caso
      * contrario.
      */
-    public Integer menorQue(int edad){
-        System.out.println("Ingrese una edad");
-        edad = leer.nextInt();
-        Integer a = p.getEdad();
-        Integer b = edad;
-        return compareTo(a, b);
+    public void menorQue(int edad) {
+        boolean menor;
+//        System.out.println("Ingrese una edad");
+//        edad = leer.nextInt();
+        if (edad > p.getEdad()) {
+            menor = true;
+        }
+        menor = false;
+        System.out.println(p.getNombre() + " es menor que la edad cargada?");
+        System.out.println(menor);
+    }
+    /**
+     * * • Metodo mostrarPersona(): este método muestra la persona creada en el
+     * método anterior.
+     */
+    public void mostrarPersona(){
+        System.out.println(p.toString());
     }
 }
