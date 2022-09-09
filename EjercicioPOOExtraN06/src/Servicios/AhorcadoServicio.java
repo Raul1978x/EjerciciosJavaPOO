@@ -6,7 +6,6 @@
 package Servicios;
 
 import Entidades.Ahorcado;
-import java.util.Arrays;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -29,19 +28,12 @@ a1.setCantIntentos(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cant
         String[] v = new String[palabra.length()];
 
         for (int i = 0; i < palabra.length(); i++) {
-//            a1.getSolucion()[i] = "_";
             v[i] = palabra.substring(i, i + 1);
         }
         a1.setFaltantes(palabra.length());
 
         a1.setPalabra(v);
 
-//            char[] vector = palabra.charAt(i);
-//        
-//        for (int i = 0; i < palabra.length(); i++) {
-//            a1.getPalabra()[i] = palabra.substring(i, i + 1);
-//            System.out.println(a1.getPalabra()[i]);
-//        }
         return a1;
     }
 
@@ -52,8 +44,6 @@ a1.setCantIntentos(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cant
      * @param a1
      */
     public int longitud(Ahorcado a1) {
-        //System.out.println("Longitud de palabra " + a1.getPalabra().length);
-
         return a1.getPalabra().length;
     }
 
@@ -67,15 +57,12 @@ a1.setCantIntentos(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cant
      */
     public int buscar(Ahorcado a1, String letra) {
         int cont = 0;
-//        letra.subSequence(0, letra.length());
 
         for (int i = 0; i < longitud(a1); i++) {
             if (letra.equalsIgnoreCase(a1.getPalabra()[i])) {
                 cont++;
                 a1.getPalabra()[i] = letra;
                 char letter = letra.charAt(0);
-//                System.out.println("");
-//                System.out.println(letter);
                 a1.getSolucion()[i]=letter;
             }
         }
@@ -87,8 +74,7 @@ a1.setCantIntentos(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cant
         }
         a1.setCantEncontradas(a1.getCantEncontradas() - cont);
         return cont;
-
-    }//buscar
+    }
 
     /**
      * Método encontradas(letra): que reciba una letra ingresada por el usuario
@@ -108,7 +94,6 @@ a1.setCantIntentos(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cant
         System.out.println("Faltan encontrar " + a1.getFaltantes() + " letras");
 
         return cant > 0;
-
     }
 
     /**
@@ -135,11 +120,9 @@ a1.setCantIntentos(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cant
                 System.out.print(a1.getPalabra()[i].toUpperCase());
             }
             System.out.println("");
-//System.out.println(Arrays.toString(a1.getPalabra()));
             return false;
         }else {
             System.out.println("Le quedan " + a1.getCantIntentos() + " intentos");
-//            Arrays.toString(a1.getSolucion());
             return true;
         }
 
@@ -154,7 +137,6 @@ a1.setCantIntentos(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cant
      */
     public void juego(Ahorcado a1) {
 
-// a1.equals(crearJuego());
         String letra;
         do {
             System.out.println("");

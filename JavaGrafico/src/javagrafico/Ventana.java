@@ -47,7 +47,7 @@ public class Ventana extends JFrame {
 //etiqueta 2 - tipo imagen
         JLabel etiqueta2 = new JLabel();
         ImageIcon imagen = new ImageIcon("C:\\Users\\Raul\\Desktop\\Curso Programacion desde cero\\Comienzo curso pago\\Programacion Orientada a Objetos POO\\EjercicioPOO\\JavaGrafico\\pelotaMundial2.jpg");
-        etiqueta2.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(etiqueta2.getWidth(), etiqueta2.getHeight(), Image.SCALE_SMOOTH)));
+//        etiqueta2.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(etiqueta2.getWidth(), etiqueta2.getHeight(), Image.SCALE_SMOOTH)));
         etiqueta2.setBounds(10, 10, 500, 500);
         panel.add(etiqueta2);
     }
