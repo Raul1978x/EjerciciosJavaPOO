@@ -5,6 +5,7 @@
  */
 package localtimelocaldate;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
 
@@ -18,6 +19,7 @@ public class LocalTimeLocalDate {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        LocalDate date5 = LocalDate.now();
 //        Un LocalDate representa una fecha en formato ISO(yyyy-MM-dd) sin tiempo
         LocalDate date = LocalDate.now();// fecha del momento de su creacion
         LocalDate date2 = LocalDate.of(2022, Month.APRIL, 26);//fecha definida por el usuario 
